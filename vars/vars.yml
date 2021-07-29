@@ -1,0 +1,10 @@
+path_1c_client: \\server\distr\1c-8-3-18-1483\tcx64\1CEnterprise 8 Thin client (x86-64).msi
+path_7zip:  \\server\distr\7zip\7z1900-x64.msi
+bareos:
+  path: \\server\distr\bareos\winbareos-19.2.7-release-64-bit.exe
+  password:  password
+
+path_chrome: \\server\distr\Browsers\GoogleChromeStandaloneEnterprise64.msi
+path_libreoffice: \\server\distr\LibreOffice\LibreOffice_7.1.3_Win_x64.msi
+path_msoffice: \\server\distr\MicrosoftOffice\MSOfficeStandart2016\setup.exe
+path_tightvnc: \\server\distr\tightvnc\tightvnc-2.8.59-gpl-setup-64bit.msi

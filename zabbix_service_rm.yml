@@ -1,0 +1,8 @@
+- name: zabbix service rm
+  hosts: windows
+  gather_facts: no
+  tasks:
+    - name: Copy  file
+      win_service:
+        name: Zabbix Agent
+        state: absent

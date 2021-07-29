@@ -1,0 +1,20 @@
+- name: Install 1C client
+  hosts: windows
+  gather_facts: no
+  tasks:
+    #- name:  Предыдущая версия
+    #  win_package:
+    #    path: \\strsrv01\distr\1c-8-3-18-1483\tcx64\1CEnterprise 8 Thin client (x86-64).msi
+    #    state: absent
+
+    #- name:  Текущая версия
+    #  win_package:
+    #    path: \\strsrv01\distr\1c-8-3-18-1483\tcx64\1CEnterprise 8 Thin client (x86-64).msi
+    #    state: present
+
+    - name:  Новая версия
+      win_package:
+        path: \\strsrv01\distr\1c-8-3-18-1483\tcx64\1CEnterprise 8 Thin client (x86-64).msi
+        state: present
+      
+    

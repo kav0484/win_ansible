@@ -1,0 +1,5 @@
+- name:  Install Picasa image viewer
+  win_package:
+    path: "{{ path_picassa }}"
+    arguments: /S
+    state: present

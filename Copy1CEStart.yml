@@ -1,0 +1,9 @@
+- name: Copy 1CEStart.cfg
+  hosts: windows
+  gather_facts: no
+  tasks:
+    - name: Copy  file
+      win_copy:
+        src: \\strsrv01\1C-BASES\1CEStart.cfg
+        dest: C:\ProgramData\1C\1CEStart\1cestart.cfg
+        remote_src: yes

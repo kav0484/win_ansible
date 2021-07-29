@@ -1,0 +1,23 @@
+- name: create task restart spooler on win7
+  hosts: windows
+  tasks:
+    - name: copy cmd for restart spooler
+      win_copy:
+        src: \\strsrv01\distr\scripts\restart_spooler.cmd
+        dest: "{{ ansible_env.SystemRoot }}"
+        remote_src: True
+      when: ansible_distribution_major_version == "6"
+
+    - name: create task
+      win_scheduled_task:
+        name: restart spooler
+        actions:
+          - path: "%systemroot%\\restart_spooler.cmd"
+        triggers:
+          - type: daily
+            start_boundary: '06:00'
+
+        username: SYSTEM
+        state: present
+        enabled: yes
+      when: ansible_distribution_major_version == "6"

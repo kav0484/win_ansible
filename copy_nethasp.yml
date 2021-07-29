@@ -1,0 +1,9 @@
+- name: Copy nethasp.ini
+  hosts: windows
+  gather_facts: no
+  tasks:
+    - name: Copy  file
+      win_copy:
+        src: \\server\1C-BASES\nethasp.ini
+        dest: C:\Program Files\1cv8\conf\nethasp.ini
+        remote_src: yes

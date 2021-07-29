@@ -1,0 +1,4 @@
+- name: LibreOffice installation
+  win_package:
+    path: "{{ path_libreOffice }}"
+    state: present

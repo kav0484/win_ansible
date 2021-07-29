@@ -1,0 +1,8 @@
+- name: restart service spooler
+  hosts: windows
+  gather_facts: no
+  tasks:
+    - name: Restart a service
+      win_service:
+        name: spooler
+        state: restarted

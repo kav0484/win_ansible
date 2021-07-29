@@ -1,0 +1,22 @@
+- name: TightVNC
+  hosts: windows
+  gather_facts: no
+  tasks:
+    - name:  Install TightVNC
+      win_package:
+        path: \\server\distr\tightvnc\tightvnc-2.8.59-gpl-setup-64bit.msi
+        state: present
+
+#    - name: change port on the 5900
+##      win_regedit:
+ #       path: HKLM:\SOFTWARE\TightVNC\Server
+#        name: RfbPort
+#        data: 0x0000170c
+#        type: dword
+
+#- name: restart tightVNC
+#      win_service:
+#        name: tvnserver
+#        state: restarted
+
+

@@ -1,0 +1,10 @@
+- name: create local admin
+  hosts: windows
+  gather_facts: no
+  tasks:
+    - win_user:
+        name: local_admin
+        password: password
+        state: present
+        groups:
+          - Администраторы

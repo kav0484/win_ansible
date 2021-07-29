@@ -1,0 +1,4 @@
+- name:  Install current 1C client
+  win_package:
+    path: "{{ path_1c_client }}"
+    state: present

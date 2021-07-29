@@ -1,0 +1,15 @@
+---
+- name: Standart Soft install on the new workstation
+  hosts: windows
+  gather_facts: no
+  vars_files:
+    - vars/vars.yml
+    
+  roles:
+    - install_1c_client
+    - install_7zip
+    - install_bareos_client
+    - install_libreoffice
+    - install_msoffice
+    - install_tightvnc
+    - install_chrome

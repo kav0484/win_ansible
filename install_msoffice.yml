@@ -1,0 +1,7 @@
+- hosts: windows
+  gather_facts: no
+  tasks:
+    - name: msoffice install
+      win_package:
+        path: \\server\distr\MicrosoftOffice\MSOfficeStandart2016\setup.exe
+        state: present

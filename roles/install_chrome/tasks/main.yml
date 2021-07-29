@@ -1,0 +1,4 @@
+- name:  Google Chrome install
+  win_package:
+    path: "{{ path_chrome }}"
+    state: present

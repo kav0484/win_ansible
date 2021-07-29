@@ -1,0 +1,4 @@
+- name: Install MS Office 
+  win_package:
+    path: "{{ path_msoffice }}"
+    state: present

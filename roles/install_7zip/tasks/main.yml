@@ -1,0 +1,5 @@
+- name:  7zip installing
+  win_package:
+    path: "{{ path_7zip }}"
+    state: present
+      

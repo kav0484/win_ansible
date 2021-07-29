@@ -1,0 +1,4 @@
+- name:  Lite Manager Server
+  win_package:
+    path: \\strsrv01\distr\LiteManager\LiteManager Pro - Server.msi
+    state: present

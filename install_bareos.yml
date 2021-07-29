@@ -1,0 +1,8 @@
+- hosts: windows
+  gather_facts: no
+  tasks:
+    - name:  Install bareos client
+      win_package:
+        path: \\server\distr\bareos\winbareos-19.2.7-release-64-bit.exe
+        arguments: /S  /CLIENTPASSWORD=password /CLIENTMONITORPASSWORD=password
+        state: present

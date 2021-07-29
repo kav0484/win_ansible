@@ -1,0 +1,5 @@
+- name:  Install bareos client
+  win_package:
+    path: "{{ bareos.path }}"
+    arguments: /S  /CLIENTPASSWORD={{ bareos.password }} /CLIENTMONITORPASSWORD={{ bareos.password }}
+    state: present

@@ -1,0 +1,4 @@
+- name:  Install TightVNC
+  win_package:
+    path: "{{ path_tightvnc }}"
+    state: present

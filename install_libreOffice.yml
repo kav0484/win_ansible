@@ -1,0 +1,7 @@
+- hosts: windows
+  gather_facts: no
+  tasks:
+    - name: LibreOffice installation
+      win_package:
+        path: \\server\distr\LibreOffice\LibreOffice_7.1.3_Win_x64.msi
+        state: present
